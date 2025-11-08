@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users")
+      .get(process.env.REACT_APP_BACKEND_URL + "/api/users")
       .then((response) => {
         setUsers(response.data.data);
       })
